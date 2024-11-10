@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+
+/*
+We want to be more conserative on the smallest of handheld devices
+However we can afford larger font sizes more closely matching our design after 600px width
+*/
+
+@media only screen and (min-device-width: 320px) {
+    :root {
+        --base-font-size: 12px;
+    }
+}
+
+@media only screen and (min-device-width: 600px) {
+    :root {
+        --base-font-size: 20px;
+    }
+}
+
+/*
+Easy, clean, simple, reusability
+*/
+:root {
+    --nav_colour: #121118;
+    --nav_text: #BCB3C6;
+
+    /* Unfortunately the images have a pure black BG so this one is unused*/
+    --bg: #1C1918;
+
+    --text: #BCB3C6;
+    --highlight: #FFE7F0;
+    --fg: #CA77A2;
+    --shade: #B74881;
+
+    --contrast: #77A8CA;
+    --contrast-shade: #4889B7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 0 0.1em;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: var(--nav_text);
+    background-color: var(--nav_colour);
+
+    font-size: calc(var(--base-font-size) * 1.8333333);
+
+    padding-bottom: 0.2em;
+}
+
+nav>h1 {
+    color: var(--nav_text);
+}
+
+body {
+    font-size: var(--base-font-size);
+
+    color: var(--text);
+
+    font-family: 'Inconsolata', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+
+    /*
+    Photographer: Nathan Anderson
+    srouce: https://unsplash.com/photos/galaxy-wallpaper-KvgB81s4dF0
+    */
+    background-color: black;
+    /* background-image: url("/assets/img/nathan-anderson-KvgB81s4dF0-unsplash.jpg"); */
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+ul,
+li {}
+
+nav>ul {
+    display: inline-flex;
+    flex-direction: row;
+
+    list-style: none;
+}
+
+li {
+    padding: 0 0.3em;
+}
+
+li>a {
+    color: var(--nav_text);
+    text-decoration: none;
+}
+
+nav>h1>a {
+    color: var(--nav_text);
+    text-decoration: none;
+}
+
+li>a:visited {
+    color: var(--nav_text);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--fg);
+
+    font-family: 'literata', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: calc(var(--base-font-size) * 2.0);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: calc(var(--base-font-size) * 1.5);
+    padding: 0 0.33em;
+}
+
+p {
+    padding: 0 0.33em;
+}
+
+.row {
+    display: flex;
+
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+
+    flex-direction: column;
+}
+
+/* section {
+    display: flex;
+
+    flex-direction: row;
+} */
+
+section {
+    padding: 8em 0;
+    margin: 0;
+}
+
+section:last-of-type {
+    padding-bottom: 16em;
+}
+
+div {
+    display: inherit;
+
+    justify-content: space-evenly;
+}
+
+img {
+    width: 100%;
+    height: auto;
+
+}
+
+.half {
+    width: 50%;
+}
+
+.half>p {
+    margin: 0 0.15em;
+}
+
+.half>ul {
+    margin: 0 0.15em;
+}
+
+.contrast {
+    color: var(--contrast);
+}
+
+.contrast-shade {
+    color: var(--contrast-shade);
+}
+
+footer>span {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 2em;
+}
