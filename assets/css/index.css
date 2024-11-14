@@ -5,13 +5,13 @@ We want to be more conserative on the smallest of handheld devices
 However we can afford larger font sizes more closely matching our design after 600px width
 */
 
-@media only screen and (min-device-width: 320px) {
+@media only screen and (min-width: 320px) {
     :root {
         --base-font-size: 12px;
     }
 }
 
-@media only screen and (min-device-width: 600px) {
+@media only screen and (min-width: 600px) {
     :root {
         --base-font-size: 20px;
     }
